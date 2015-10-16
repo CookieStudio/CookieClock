@@ -83,4 +83,14 @@ public class GammerRepoHelper extends OrmLiteSqliteOpenHelper implements GammerR
             throw new RuntimeException(e.getMessage(), e);
         }
     }
+
+    public void deleteGammer(GammerResultDAO gammerResultDAO) {
+        try {
+            String uuid = gammerResultDAO.getUuid();
+            getDao(GammerResultDAO.class).delete(gammerResultDAO);
+        } catch (SQLException e) {
+            Log.e(TAG, "Error when delete gammer");
+            throw new RuntimeException(e.getMessage(), e);
+        }
+    }
 }

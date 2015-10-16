@@ -2,4 +2,16 @@
     <string name="app_name">CookieClock</string>
 
     <string name="dummy_content">TOMTOM</string>
+    <string name="start">START!</string>
+    <string name="stop">STOP!</string>
+    <string name="zero_time">00:00:000</string>
+    <string name="name">Imię i Nazwisko:</string>
+    <string name="surname">E-mail:</string>
+    <string name="mail">Numer telefonu:</string>
+    <string name="save">Zapisz!</string>
+    <string name="results">Wyniki:</string>
+    <string name="no_data_warning">Brakuje danych do zapisu!</string>
+    <string name="contact">Kontakt: </string>
+    <string name="title_activity_results">ResultsActivity</string>
+    <string name="dummy_button">Dummy Button</string>
 </resources>
