@@ -6,7 +6,7 @@
     <string name="stop">STOP!</string>
     <string name="zero_time">00:00:000</string>
     <string name="name">Imię i Nazwisko:</string>
-    <string name="surname">E-mail:</string>
+    <string name="email">E-mail:</string>
     <string name="mail">Numer telefonu:</string>
     <string name="save">Zapisz!</string>
     <string name="results">Wyniki:</string>

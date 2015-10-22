@@ -19,7 +19,7 @@ import java.util.UUID;
 public class GammerRepoHelper extends OrmLiteSqliteOpenHelper implements GammerResultRepo{
 
     private static final String DATABASE_NAME = "gammer.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     private static final String TAG = "GammerRepoHelper";
 
     public GammerRepoHelper(Context context) {

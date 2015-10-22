@@ -183,7 +183,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         if(isEditTextNotEmpty()) {
             GammerResultDAO gamer = new GammerResultDAO();
             gamer.setName(name.getText().toString());
-            gamer.setSurname(email.getText().toString());
+            gamer.setEmail(email.getText().toString());
             gamer.setTimeinMs(updatedTime);
 
             data.saveGammerResult(gamer);

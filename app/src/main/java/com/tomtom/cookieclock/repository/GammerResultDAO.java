@@ -21,7 +21,7 @@ public class GammerResultDAO {
 
 
     @DatabaseField
-    private String surname;
+    private String email;
 
     @DatabaseField(columnName = "timeinms")
     private long timeinms;
@@ -38,7 +38,7 @@ public class GammerResultDAO {
         GammerResultDAO res =   new GammerResultDAO();
         res.setUuid(UUID.randomUUID().toString());
         res.name = name;
-        res.surname = surname;
+        res.email = surname;
         res.timeinms = timeinms;
         return res;
     }
@@ -58,12 +58,12 @@ public class GammerResultDAO {
         this.name = name;
     }
 
-    public String getSurname() {
-        return surname;
+    public String getEmail() {
+        return email;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public long getTimeinMs() {

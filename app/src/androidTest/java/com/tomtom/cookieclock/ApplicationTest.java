@@ -29,7 +29,7 @@ public class ApplicationTest extends ApplicationTestCase<Application> {
         //THEN one result should be save
         assert gammerRepoHelper.getResults().size() == 1;
         assert gammerRepoHelper.getResults().get(0).getName().equals(GAMER1_NAME);
-        assert gammerRepoHelper.getResults().get(0).getSurname().equals(GAMER1_SURNAME);
+        assert gammerRepoHelper.getResults().get(0).getEmail().equals(GAMER1_SURNAME);
         assert gammerRepoHelper.getResults().get(0).getTimeinMs() == 1000l;
     }
 

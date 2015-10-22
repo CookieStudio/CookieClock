@@ -5,14 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
 
 import com.tomtom.cookieclock.repository.GammerRepoHelper;
 import com.tomtom.cookieclock.repository.GammerResultDAO;
 
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -63,13 +61,19 @@ public class ResultsActivity extends AppCompatActivity implements RecyclerItemCl
 
     @Override
     public void onItemClick(View childView, int position) {
-        Toast.makeText(getApplicationContext(), gammersList.get(position).getSurname(), Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), gammersList.get(position).getEmail(), Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void onItemLongPress(View childView, int position) {
         Toast.makeText(getApplicationContext(),  "usunieto: " + gammersList.get(position).getName(), Toast.LENGTH_SHORT).show();
         gamers.deleteGammer(gammersList.get(position));
+        gammersList = gamers.getResults();
+        Collections.sort(gammersList, new TimeComparator());
+
+        adapter = new RVAdapter(gammersList);
+        rv.setAdapter(adapter);
         adapter.notifyDataSetChanged();
+
     }
 }
